@@ -1,0 +1,16 @@
+= form_for @twe do |f|
+  - if @twe.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@twe.errors.count, "error")} prohibited this twe from being saved:"
+      %ul
+        - @twe.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :user_id
+    = f.number_field :user_id
+  .field
+    = f.label :content
+    = f.text_field :content
+  .actions
+    = f.submit 'Save'

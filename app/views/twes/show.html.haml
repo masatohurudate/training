@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @twe.user_id
+%p
+  %b Content:
+  = @twe.content
+
+= link_to 'Edit', edit_twe_path(@twe)
+\|
+= link_to 'Back', twes_path
